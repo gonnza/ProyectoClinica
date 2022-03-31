@@ -24,9 +24,15 @@
                     <h4 style="margin-left: 40%">Datos de Paciente</h4>
                 </div>
             </div>
-
+            
             <div class="row" >
                 <div class="col" >
+                     <div class="row">
+                        <div class="data input-group input-group-sm mb-3" style="margin-left: 40%">
+                          <asp:TextBox ID="txtId" class="form-control " runat="server" Visible="False" >0</asp:TextBox>
+                          
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="data input-group input-group-sm mb-3" style="margin-left: 40%">
                           <span class="input-group-text" >Nombre</span>
@@ -46,7 +52,7 @@
                     
                 </div>
                 <div class="col">
-                    <div class="row">
+                    <div class="row mt-3">
                         <asp:Button ID="btnNuevo" class="btnMed btn btn-primary mb-2" type="button" runat="server" Text="Nuevo" />
                     </div>
                     <div class="row">
@@ -67,6 +73,9 @@
             <div class="row">
                 <div class="col">
                     <asp:GridView ID="gridPacientes"  class="table table-striped border border-primary" runat="server" Width="792px" HorizontalAlign="Center">
+                        <Columns>
+                            <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Select row" ShowHeader="True" Text="Seleccionar" />
+                        </Columns>
                     </asp:GridView>  
                 </div>
             </div>

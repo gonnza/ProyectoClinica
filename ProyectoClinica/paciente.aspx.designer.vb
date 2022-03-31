@@ -23,6 +23,15 @@ Partial Public Class paciente
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''Control txtId.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtId As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''Control txtNombre.
     '''</summary>
     '''<remarks>

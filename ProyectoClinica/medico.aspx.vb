@@ -26,7 +26,7 @@ Public Class medico
 
 
     Protected Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-
+        Limpiar()
     End Sub
 
     Protected Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click

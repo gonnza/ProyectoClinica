@@ -19,6 +19,33 @@ Public Class pacienteDatos
     End Sub
 
 
+    Public Sub Modificar(ByVal paciente As EPaciente)
+
+        Dim Conexion As New MySqlConnection(_cadenaConexion)
+        Conexion.Open()
+        Dim Query As String = "UPDATE `paciente` SET `nro_historia_clinica`='" & paciente.NroHistoriaClinica & "', `nombre`='" & paciente.Nombre & "'; "
+        Dim Comando As New MySqlCommand(Query, Conexion)
+        Comando.ExecuteNonQuery()
+        Conexion.Close()
+
+
+    End Sub
+
+
+
+    Public Sub Eliminar(ByVal paciente As EPaciente)
+
+        Dim Conexion As New MySqlConnection(_cadenaConexion)
+        Conexion.Open()
+        Dim Query As String = "DELETE FROM `paciente` WHERE  `id`='" & paciente.Id & "'"
+        Dim Comando As New MySqlCommand(Query, Conexion)
+        Comando.ExecuteNonQuery()
+        Conexion.Close()
+
+
+    End Sub
+
+
     Public Function Listar() As DataSet
 
         Dim Conexion As New MySqlConnection(_cadenaConexion)
