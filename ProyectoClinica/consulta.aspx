@@ -16,14 +16,26 @@
 <body>
     <form id="form1" runat="server">
         
-        <div class="container-sm border border-primary border-5" style="margin-top: 5%">
+        <div class="container-sm " style="margin-top: 5%">
             
 
-            <div class="row">
-                <div class="col">
-                    <h4 style="margin-left: 45%;">Consulta</h4>
+            <div class="card border border-5">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-4">
+                           <asp:Button class="btn btn-secondary" runat="server" Text="&#8962; Volver" OnClick="Unnamed1_Click"  />
+                        </div>
+                        <div class="col">
+                            <h4 class="text-center">Consulta</h4>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
                 </div>
-            </div>
+                <div class="card-body">
+
+                
+                    
+                
 
             <div class="row" >
                 <div class="col mt-1 " style="margin-right: 2%;">
@@ -103,14 +115,17 @@
                         <asp:Button ID="btnGuardar" class="btnMed btn btn-warning mb-2" runat="server" Text="Guardar" />
                     
                         <asp:Button ID="btnEliminar" class="btnMed btn btn-danger mb-2" runat="server" Text="Eliminar" />
-                    </div>
+                 </div>
+                </div>
+             </div>
             </div>
-
-            <div class="row">
-                <div class="col">
+            <div class="card border border-5">
+                <div class="card-header">
                     <h4 style="margin-left: 40%">Lista de Consultas</h4>
                 </div>
-            </div>
+                <div class="card-body">
+
+                
 
             <div class="row">
                 <div class="col">
@@ -121,7 +136,8 @@
                     </asp:GridView>  
                 </div>
             </div>
-            
+            </div>
+           </div>
         </div>
     </form>
 </body>

@@ -16,14 +16,24 @@
 <body>
     <form id="form1" runat="server">
         
-        <div class="container-sm border border-primary border-5" style="margin-top: 5%">
+        <div class="container-sm " style="margin-top: 5%; ">
             
-
-            <div class="row">
-                <div class="col">
-                    <h4 style="margin-left: 40%">Datos de Paciente</h4>
+            
+            <div class="card border border-5">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-4">
+                           <asp:Button class="btn btn-secondary" runat="server" Text="&#8962; Volver" OnClick="Unnamed1_Click"  />
+                        </div>
+                        <div class="col">
+                            <h4 class="text-center">Datos Paciente</h4>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
                 </div>
-            </div>
+                <div class="card-body">
+
+                
             
             <div class="row" >
                 <div class="col" >
@@ -62,17 +72,21 @@
                         <asp:Button ID="btnEliminar" class="btnMed btn btn-danger mb-2" runat="server" Text="Eliminar" />
                     </div>
                 </div>
+               </div>
+             </div>
             </div>
 
-            <div class="row">
-                <div class="col">
+            <div class="card border border-5">
+                <div class="card-header">
                     <h4 style="margin-left: 40%">Lista de Pacientes</h4>
                 </div>
-            </div>
+                <div class="card-body">
+
+                
 
             <div class="row">
-                <div class="col">
-                    <asp:Button ID="btnPaci" class=" btn btn-danger mb-2" runat="server" Text="Ver Paciente" />
+                <div class="col-2">
+                    <asp:Button ID="btnPaci" class=" btn btn-danger mb-2" runat="server" Text="Ver Consulta" />
                 </div>
                 <div class="col">
                     <asp:GridView ID="gridPacientes"  class="table table-striped border border-primary" runat="server" Width="792px" HorizontalAlign="Center">
@@ -82,7 +96,8 @@
                     </asp:GridView>  
                 </div>
             </div>
-            
+           </div>
+          </div>
         </div>
     </form>
 </body>

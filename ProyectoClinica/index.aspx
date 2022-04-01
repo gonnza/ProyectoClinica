@@ -16,14 +16,14 @@
 <body>
     <form id="form1" runat="server">
         
-        <div class="container-sm border border-primary border-5" style="margin-top: 5%">
+        <div class="container-sm " style="margin-top: 5%">
             
-
-            <div class="row">
-                <div class="col">
-                    <h4 style="margin-left: 40%">Clinicas</h4>
-                </div>
+            
+        <div  class="card border border-4">
+            <div class="card-header">
+                <h4 >Clinicas</h4>
             </div>
+            <div class="card-body">
 
             <div class="row" >
                 <div class="col" >
@@ -43,32 +43,30 @@
 
 
                     </div>
-                <div class="col">
-                    <div class="row mt-3">
-                        <asp:Button ID="btnNuevo" class="btnMed btn btn-primary mb-2" type="button" runat="server" Text="Nuevo" />
-                    </div>
-                    <div class="row">
-                        <asp:Button ID="btnGuardar" class="btnMed btn btn-warning mb-2" runat="server" Text="Guardar" />
-                    </div>
-                    <div class="row">
-                        <asp:Button ID="btnEliminar" class="btnMed btn btn-danger mb-2" runat="server" Text="Eliminar" />
-                    </div>
+                <div class="col" style="margin-top: 1%">
+                    
+                      <asp:Button ID="btnNuevo" class="btnMed btn btn-primary " type="button" runat="server" Text="Nuevo" />
+                     <asp:Button ID="btnGuardar" class="btnMed btn btn-warning" runat="server" Text="Guardar" />
+                     <asp:Button ID="btnEliminar" class="btnMed btn btn-danger " runat="server" Text="Eliminar" />
                 </div>
+               </div>
+              </div>
             </div>
-
-            <div class="row">
-                <div class="col">
-                    <h4 style="margin-left: 40%">Lista de Clinicas</h4>
+            <div class="card border border-4">
+                <div class="card-header">
+                    <h4>Lista de Clinicas(Seleccionar  clinica para  interactuar)</h4>
                 </div>
-            </div>
-
+            
+            <div class="card-body">
             <div class="row">
-                <div class="col-4">
-                     <asp:Button ID="btnPaciente" class=" btn btn-danger mb-2" runat="server" Text="Ver pacientes" />
+                <div class="col-4 " style="padding-left: 3%">
                     <div class="row">
-                        <asp:Button ID="btnMedico" class=" btn btn-danger mb-2" runat="server" Text="Ver medico" />
-
+                        <asp:Button ID="btnPaciente" class=" btn btn-success mb-2" runat="server" Text="Ver pacientes" />
                     </div>
+                    <div class="row">
+                        <asp:Button ID="btnMedico" class=" btn btn-info mb-2" runat="server" Text="Ver medico" />
+                    </div>
+                     
                 </div>
                 <div class="col-8">
                     <asp:GridView ID="gridClinicas"  class="table table-striped border border-primary" runat="server" Width="792px" HorizontalAlign="Center"   >
@@ -78,8 +76,9 @@
                     </asp:GridView>  
                 </div>
                 
-            </div>
-            
+               </div>
+             </div>
+           </div>
         </div>
     </form>
 </body>

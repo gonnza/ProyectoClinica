@@ -3,7 +3,9 @@ Imports entidades
 
 Public Class medicoDatos
 
-    Private _cadenaConexion As String = "Server=127.0.0.1;User=root;Password=123456;Port=3306;database=clinica_system"
+    Private conexionConfig As New conexionConfig
+
+    Private _cadenaConexion As String = conexionConfig.Cadena_conexion
 
 
     Public Sub Insertar(ByVal medico As EMedico, ByVal idClinica As Integer)
@@ -58,8 +60,15 @@ Public Class medicoDatos
 
 
     Public Sub Eliminar(ByVal medico As EMedico)
-
         Dim Conexion As New MySqlConnection(_cadenaConexion)
+
+        Conexion.Open()
+        Dim QueryDos As String = "DELETE FROM `clinica_medico` WHERE  `id_medico`='" & medico.Id & "'"
+        Dim ComandoDos As New MySqlCommand(QueryDos, Conexion)
+        ComandoDos.ExecuteNonQuery()
+        Conexion.Close()
+
+
         Conexion.Open()
         Dim Query As String = "DELETE FROM `medico` WHERE  `id`='" & medico.Id & "'"
         Dim Comando As New MySqlCommand(Query, Conexion)

@@ -3,7 +3,9 @@ Imports entidades
 Imports System.Windows.Forms
 
 Public Class clinicaDatos
-    Private _cadenaConexion As String = "Server=127.0.0.1;User=root;Password=123456;Port=3306;database=clinica_system"
+    Private conexionConfig As New conexionConfig
+
+    Private _cadenaConexion As String = conexionConfig.Cadena_conexion
 
     Public Sub Insertar(ByVal clinica As EClinica)
         Dim Conexion As New MySqlConnection(_cadenaConexion)

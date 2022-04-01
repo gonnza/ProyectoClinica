@@ -3,8 +3,10 @@ Imports entidades
 
 Public Class pacienteDatos
 
-    Private _cadenaConexion As String = "Server=127.0.0.1;User=root;Password=123456;Port=3306;database=clinica_system"
-    Dim idClin As Integer
+    Private conexionConfig As New conexionConfig
+
+    Private _cadenaConexion As String = conexionConfig.Cadena_conexion
+
 
     Public Sub Insertar(ByVal paciente As EPaciente, ByVal idClinica As Integer)
         Dim readerPaciente As MySqlDataReader
@@ -86,7 +88,7 @@ Public Class pacienteDatos
         Dim dataSet As New DataSet
 
 
-        Dim Query As String = "SELECT p.id As `Id`, p.nro_historia_clinica As `Nro Historia Clinica`, p.nombre as `Nombre` FROM paciente p INNER  JOIN clinica_paciente c ON p.id = c.id_paciente WHERE c.id_clinica = " & idClinica & ";"
+        Dim Query As String = "SELECT p.id As `Id`, p.nro_historia_clinica As `Nro Historia Clinica`, p.nombre as `Nombre` FROM paciente p INNER  JOIN clinica_paciente c ON p.id = c.id_paciente  WHERE c.id_clinica = " & idClinica & ";"
         Adaptador = New MySqlDataAdapter(Query, Conexion)
         Adaptador.Fill(dataSet)
 

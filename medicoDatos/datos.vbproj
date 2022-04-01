@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clinicaDatos.vb" />
+    <Compile Include="conexionConfig.vb" />
     <Compile Include="consultaDatos.vb" />
     <Compile Include="medicoDatos.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

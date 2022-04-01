@@ -9,15 +9,7 @@ Public Class consultaService
 
         Dim resultado As Boolean = True
 
-        If consulta.Id_medico = "" Then
-            resultado = False
-            MessageBox.Show("Debe indicar un medico asignado")
-        End If
 
-        If consulta.Id_paciente = "" Then
-            resultado = False
-            MessageBox.Show("Debe indicar un paciente")
-        End If
         If consulta.Tipo_consulta = "" Then
             resultado = False
             MessageBox.Show("Debe indicar el tipo de consulta")

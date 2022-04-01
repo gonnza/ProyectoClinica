@@ -1,4 +1,5 @@
-﻿Imports entidades
+﻿Imports System.Windows.Forms
+Imports entidades
 Imports servicios
 
 Public Class clinica
@@ -70,10 +71,18 @@ Public Class clinica
     End Sub
 
     Protected Sub btnPaciente_Click(sender As Object, e As EventArgs) Handles btnPaciente.Click
+        If txtId.Text = "0" Then
+            MessageBox.Show("Por favor, seleccione un hospital")
+            Exit Sub
+        End If
         Response.Redirect("~/paciente.aspx?id=" + txtId.Text)
     End Sub
 
     Protected Sub btnMedico_Click(sender As Object, e As EventArgs) Handles btnMedico.Click
+        If txtId.Text = "0" Then
+            MessageBox.Show("Por favor, seleccione un hospital")
+            Exit Sub
+        End If
         Response.Redirect("~/medico.aspx?id=" + txtId.Text)
     End Sub
 End Class

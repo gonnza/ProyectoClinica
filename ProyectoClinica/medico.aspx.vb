@@ -89,5 +89,7 @@ Public Class medico
         selectEspecialidad.SelectedValue = HttpUtility.HtmlDecode(gridMedicos.SelectedRow.Cells.Item(4).Text.ToString)
     End Sub
 
-
+    Protected Sub Unnamed1_Click(sender As Object, e As EventArgs)
+        Response.Redirect("~/index.aspx")
+    End Sub
 End Class

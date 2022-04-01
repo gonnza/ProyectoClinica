@@ -63,14 +63,16 @@ Public Class WebForm1
 
     Protected Sub gridConsultas_onSelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles gridConsultas.SelectedIndexChanged
         Dim consulta As New EConsulta
-
+        nroHistoriaClinica.Enabled = False
+        nroMatricula.Enabled = False
         txtId.Text = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(1).Text.ToString)
         Calendar1.SelectedDate = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(2).Text.ToString)
         txtDescripcion.Text = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(3).Text.ToString)
         selectTipoConsulta.SelectedValue = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(4).Text.ToString)
         txtCosto.Text = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(5).Text.ToString)
         txtCostoPractica.Text = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(6).Text.ToString)
-
+        nroMatricula.Text = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(8).Text.ToString)
+        nroHistoriaClinica.Text = HttpUtility.HtmlDecode(gridConsultas.SelectedRow.Cells.Item(11).Text.ToString)
     End Sub
 
 
@@ -81,6 +83,8 @@ Public Class WebForm1
     End Sub
 
     Protected Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        nroHistoriaClinica.Enabled = True
+        nroMatricula.Enabled = True
         Limpiar()
     End Sub
 
@@ -96,7 +100,7 @@ Public Class WebForm1
         Limpiar()
     End Sub
 
-
-
-
+    Protected Sub Unnamed1_Click(sender As Object, e As EventArgs)
+        Response.Redirect("~/index.aspx")
+    End Sub
 End Class

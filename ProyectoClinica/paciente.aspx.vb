@@ -1,4 +1,5 @@
-﻿Imports entidades
+﻿Imports System.Windows.Forms
+Imports entidades
 Imports servicios
 
 Public Class paciente
@@ -39,8 +40,6 @@ Public Class paciente
         If validacion = False Then Exit Sub
 
 
-
-
         If paciente.Id = 0 Then
             pacienteService.guardar(paciente, idClinica)
         Else
@@ -78,6 +77,14 @@ Public Class paciente
     End Sub
 
     Protected Sub btnPaci_Click(sender As Object, e As EventArgs) Handles btnPaci.Click
+        If txtId.Text = "0" Then
+            MessageBox.Show("Por favor, seleccione un paciente")
+            Exit Sub
+        End If
         Response.Redirect("~/consulta.aspx?id=" + txtId.Text)
+    End Sub
+
+    Protected Sub Unnamed1_Click(sender As Object, e As EventArgs)
+        Response.Redirect("~/index.aspx")
     End Sub
 End Class
