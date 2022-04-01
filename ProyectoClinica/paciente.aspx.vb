@@ -6,8 +6,11 @@ Public Class paciente
 
     Dim pacienteService As New pacienteService()
     Public dst As DataSet
+    Dim idClinica As Integer
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        idClinica = Request.QueryString("id")
+
         CargarGrid()
     End Sub
 
@@ -39,7 +42,7 @@ Public Class paciente
 
 
         If paciente.Id = 0 Then
-            pacienteService.guardar(paciente)
+            pacienteService.guardar(paciente, idClinica)
         Else
             pacienteService.Editar(paciente)
         End If
@@ -70,7 +73,11 @@ Public Class paciente
 
     Private Sub CargarGrid()
 
-        gridPacientes.DataSource = pacienteService.Listar().Tables(0)
+        gridPacientes.DataSource = pacienteService.Listar(idClinica).Tables(0)
         gridPacientes.DataBind()
+    End Sub
+
+    Protected Sub btnPaci_Click(sender As Object, e As EventArgs) Handles btnPaci.Click
+        Response.Redirect("~/consulta.aspx?id=" + txtId.Text)
     End Sub
 End Class

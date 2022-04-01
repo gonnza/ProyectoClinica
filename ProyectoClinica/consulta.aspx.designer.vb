@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class paciente
+Partial Public Class WebForm1
 
     '''<summary>
     '''Control form1.
@@ -32,22 +32,67 @@ Partial Public Class paciente
     Protected WithEvents txtId As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtNombre.
+    '''Control txtDescripcion.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNombre As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDescripcion As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control txtNroHistoriaClinica.
+    '''Control selectTipoConsulta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNroHistoriaClinica As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents selectTipoConsulta As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control txtCosto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCosto As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtCostoPractica.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtCostoPractica As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control nroHistoriaClinica.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents nroHistoriaClinica As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control nroMatricula.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents nroMatricula As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control Calendar1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Calendar1 As Global.System.Web.UI.WebControls.Calendar
 
     '''<summary>
     '''Control btnNuevo.
@@ -77,20 +122,11 @@ Partial Public Class paciente
     Protected WithEvents btnEliminar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnPaci.
+    '''Control gridConsultas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnPaci As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control gridPacientes.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents gridPacientes As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents gridConsultas As Global.System.Web.UI.WebControls.GridView
 End Class

@@ -20,16 +20,16 @@ Public Class medicoService
 
 
 
-    Public Sub guardar(ByVal medico As EMedico)
-        medicoDatos.Insertar(medico)
+    Public Sub guardar(ByVal medico As EMedico, ByVal idClinica As Integer)
+        medicoDatos.Insertar(medico, idClinica)
     End Sub
 
     Public Sub Editar(ByVal medico As EMedico)
         medicoDatos.Modificar(medico)
     End Sub
 
-    Public Function Listar() As DataSet
-        Return medicoDatos.Listar()
+    Public Function Listar(ByVal idClinica As Integer) As DataSet
+        Return medicoDatos.Listar(idClinica)
     End Function
 
     Public Sub Elminar(ByVal medico As EMedico)

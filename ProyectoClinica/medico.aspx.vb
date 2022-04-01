@@ -1,17 +1,20 @@
 ﻿
+Imports System.Windows.Forms
 Imports entidades
 Imports servicios
-Imports enums
+
 
 
 Public Class medico
     Inherits System.Web.UI.Page
+    Dim idClinica As Integer
 
     Dim medicoService As New medicoService()
 
     Public dst As DataSet
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        idClinica = Request.QueryString("id")
         CargarGrid()
 
     End Sub
@@ -47,7 +50,7 @@ Public Class medico
 
 
         If medico.Id = 0 Then
-            medicoService.guardar(medico)
+            medicoService.guardar(medico, idClinica)
         Else
             medicoService.Editar(medico)
         End If
@@ -55,11 +58,12 @@ Public Class medico
 
 
         CargarGrid()
+        Limpiar()
     End Sub
 
     Private Sub CargarGrid()
 
-        gridMedicos.DataSource = medicoService.Listar().Tables(0)
+        gridMedicos.DataSource = medicoService.Listar(idClinica).Tables(0)
         gridMedicos.DataBind()
     End Sub
 
@@ -70,7 +74,7 @@ Public Class medico
         medico.Id = Integer.Parse(txtId.Text)
         medicoService.Elminar(medico)
         CargarGrid()
-
+        Limpiar()
     End Sub
 
 
@@ -78,13 +82,12 @@ Public Class medico
 
 
     Protected Sub gridMedicos_onSelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles gridMedicos.SelectedIndexChanged
+        MessageBox.Show(HttpUtility.HtmlDecode(gridMedicos.SelectedRow.Cells.Item(1).Text.ToString))
         txtId.Text = HttpUtility.HtmlDecode(gridMedicos.SelectedRow.Cells.Item(1).Text.ToString)
         txtNombre.Text = HttpUtility.HtmlDecode(gridMedicos.SelectedRow.Cells.Item(2).Text.ToString)
         txtNroMatricula.Text = HttpUtility.HtmlDecode(gridMedicos.SelectedRow.Cells.Item(3).Text.ToString)
         selectEspecialidad.SelectedValue = HttpUtility.HtmlDecode(gridMedicos.SelectedRow.Cells.Item(4).Text.ToString)
     End Sub
 
-    Protected Sub DropDownList1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles selectEspecialidad.SelectedIndexChanged
 
-    End Sub
 End Class

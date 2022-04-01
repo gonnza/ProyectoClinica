@@ -64,8 +64,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EClinica.vb" />
+    <Compile Include="EConsulta.vb" />
     <Compile Include="EMedico.vb" />
     <Compile Include="EPaciente.vb" />
+    <Compile Include="EspecialidadesEnum.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

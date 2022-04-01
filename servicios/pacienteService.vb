@@ -18,8 +18,8 @@ Public Class pacienteService
         Return resultado
     End Function
 
-    Public Sub guardar(ByVal paciente As EPaciente)
-        pacienteDatos.Insertar(paciente)
+    Public Sub guardar(ByVal paciente As EPaciente, ByVal idClinica As Integer)
+        pacienteDatos.Insertar(paciente, idClinica)
     End Sub
 
     Public Sub Editar(ByVal paciente As EPaciente)
@@ -34,7 +34,7 @@ Public Class pacienteService
     End Sub
 
 
-    Public Function Listar() As DataSet
-        Return pacienteDatos.Listar()
+    Public Function Listar(ByVal idClinica As Integer) As DataSet
+        Return pacienteDatos.Listar(idClinica)
     End Function
 End Class

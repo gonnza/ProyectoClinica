@@ -52,6 +52,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -96,6 +97,7 @@
     <Content Include="medico.aspx" />
     <Content Include="Web.config" />
     <Content Include="paciente.aspx" />
+    <Content Include="consulta.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="index.aspx.designer.vb">
@@ -136,6 +138,13 @@
     </Compile>
     <Compile Include="paciente.aspx.vb">
       <DependentUpon>paciente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="consulta.aspx.designer.vb">
+      <DependentUpon>consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consulta.aspx.vb">
+      <DependentUpon>consulta.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

@@ -55,7 +55,7 @@
                           <asp:DropDownList ID="selectEspecialidad" CssClass="form-select" runat="server">
                               <asp:ListItem>Cirujano</asp:ListItem>
                               <asp:ListItem>Dentista</asp:ListItem>
-                              <asp:ListItem>Terapeuta</asp:ListItem>
+                              <asp:ListItem>Otorrino</asp:ListItem>
                             </asp:DropDownList>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                 <div class="col">
                     <asp:GridView ID="gridMedicos"  class="table table-striped border border-primary" runat="server" Width="792px" HorizontalAlign="Center"   >
                         <Columns>
-                            <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Select Row" ShowHeader="True" Text="Seleccionar" />
+                            <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Seleccionar" ShowHeader="True" Text="Seleccionar" />
                         </Columns>
                     </asp:GridView>  
                 </div>
@@ -102,7 +102,4 @@
     .btnMed {
         width: 15%;
     }
-    .auto-style1 {
-        width: 153px;
-    }
-</style>
+    </style>

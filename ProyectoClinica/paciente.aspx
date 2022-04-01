@@ -72,6 +72,9 @@
 
             <div class="row">
                 <div class="col">
+                    <asp:Button ID="btnPaci" class=" btn btn-danger mb-2" runat="server" Text="Ver Paciente" />
+                </div>
+                <div class="col">
                     <asp:GridView ID="gridPacientes"  class="table table-striped border border-primary" runat="server" Width="792px" HorizontalAlign="Center">
                         <Columns>
                             <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Select row" ShowHeader="True" Text="Seleccionar" />
