@@ -7,7 +7,7 @@
 ### MySql - Visual Studio/ Visual Basic .net - Asp.net
 
 ## INSTRUCCIONES
-### Se debe seleccionar una clinica, o si no hay clinica, crear una, para poder empezar a interactuar con los botones. En todo el programa se implemente esta reglamentación.
+### Empezar por index.aspx. Se debe seleccionar una clinica, o si no hay clinica, crear una, para poder empezar a interactuar con los botones. En todo el programa se implemente esta reglamentación.
 
 ## AUTORES
 ### Gonzalo Cisneros
